@@ -11,4 +11,6 @@ builder.RootComponents.RegisterCustomElement<TodoItem>("todo-item");
 // Configureer de HttpClient om de base URL te gebruiken van de gehoste Blazor-app
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+// Bouw de app
 await builder.Build().RunAsync();
+
