@@ -2,11 +2,9 @@
 
 services:
   blazor-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: akeshman1908/frontend-blazor-app:latest  # Gebruik je gepushte image op Docker Hub
     ports:
-      - "5000:80"  # Expose Nginx on port 5000
+      - "5000:80"  # Expose de app op poort 5000 op de host en map naar poort 80 in de container
     networks:
       - blazor-network
 
