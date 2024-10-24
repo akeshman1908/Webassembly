@@ -1,0 +1,15 @@
+﻿version: '3.8'
+
+services:
+  blazor-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"  # Expose Nginx on port 5000
+    networks:
+      - blazor-network
+
+networks:
+  blazor-network:
+    driver: bridge
